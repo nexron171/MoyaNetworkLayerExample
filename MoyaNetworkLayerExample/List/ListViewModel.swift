@@ -30,7 +30,7 @@ class ListViewModel {
                 self.error.onNext(message)
             }
         }, onError: { error in
-
+            self.error.onNext(error.localizedDescription)
         }).disposed(by: disposeBag)
     }
 }
